@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="panel">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="clu" />
+		</supported-bridge-type-refs>
+
+		<label>Grenton Panel</label>
+		<description>Grenton Panel x4 / x8</description>
+
+		<channels>
+			<channel id="button1" typeId="button" />
+			<channel id="button2" typeId="button" />
+			<channel id="button3" typeId="button" />
+			<channel id="button4" typeId="button" />
+			<channel id="button5" typeId="button" />
+			<channel id="button6" typeId="button" />
+			<channel id="button7" typeId="button" />
+			<channel id="button8" typeId="button" />
+			<channel id="panel_sensor1" typeId="panel_sensor" />
+			<channel id="panel_sensor2" typeId="panel_sensor" />
+		</channels>
+
+		<config-description>
+			<parameter name="pageId" type="integer" required="true">
+				<label>Grenton channel number. Each thing should have different pageId.</label>
+				<default>202</default>
+			</parameter>
+			<parameter name="pollingInterval" type="integer" required="true">
+				<label>PollingInterval.</label>
+				<default>10</default>
+			</parameter>
+			<parameter name="buttonName1" type="text" required="true">
+				<label>button1</label>
+				<description>button1</description>
+			</parameter>
+			<parameter name="buttonName2" type="text" required="true">
+				<label>button2</label>
+				<description>button2</description>
+			</parameter>
+			<parameter name="buttonName3" type="text" required="true">
+				<label>button3</label>
+				<description>button3</description>
+			</parameter>
+			<parameter name="buttonName4" type="text" required="true">
+				<label>button4</label>
+				<description>button4</description>
+			</parameter>
+			<parameter name="buttonName5" type="text" required="false">
+				<label>button5</label>
+				<description>button5</description>
+			</parameter>
+			<parameter name="buttonName6" type="text" required="false">
+				<label>button6</label>
+				<description>button6</description>
+			</parameter>
+			<parameter name="buttonName7" type="text" required="false">
+				<label>button7</label>
+				<description>button7</description>
+			</parameter>
+			<parameter name="buttonName8" type="text" required="false">
+				<label>button8</label>
+				<description>button8</description>
+			</parameter>
+			<parameter name="buttonName8" type="text" required="false">
+				<label>button8</label>
+				<description>button8</description>
+			</parameter>
+			<parameter name="sensorName1" type="text" required="false">
+				<label>temperature sensor</label>
+				<description>temperature sensor</description>
+			</parameter>
+			<parameter name="sensorName2" type="text" required="false">
+				<label>light sensor</label>
+				<description>light sensor</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<channel-type id="button">
+		<item-type>Contact</item-type>
+		<label>Contact</label>
+		<state readOnly="true" />
+	</channel-type>
+
+	<channel-type id="panel_sensor">
+		<item-type>Number</item-type>
+		<label>Panel sensor</label>
+		<state readOnly="true" />
+	</channel-type>
+
+</thing:thing-descriptions>

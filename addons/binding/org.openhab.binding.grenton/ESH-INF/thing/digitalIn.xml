@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="digitalIn">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="clu" />
+		</supported-bridge-type-refs>
+
+		<label>Grenton DigitalIn</label>
+		<description>Grenton DigitalIn x8</description>
+
+		<channels>
+			<channel id="din1" typeId="din" />
+			<channel id="din2" typeId="din" />
+			<channel id="din3" typeId="din" />
+			<channel id="din4" typeId="din" />
+			<channel id="din5" typeId="din" />
+			<channel id="din6" typeId="din" />
+			<channel id="din7" typeId="din" />
+			<channel id="din8" typeId="din" />
+		</channels>
+
+		<config-description>
+			<parameter name="pageId" type="integer" required="true">
+				<label>Grenton channel number. Each thing should have different pageId.</label>
+				<default>201</default>
+			</parameter>
+			<parameter name="pollingInterval" type="integer" required="true">
+				<label>PollingInterval.</label>
+				<default>10</default>
+			</parameter>
+			<parameter name="dinName1" type="text" required="true">
+				<label>digitalIn1</label>
+				<description>din1</description>
+			</parameter>
+			<parameter name="dinName2" type="text" required="true">
+				<label>digitalIn2</label>
+				<description>din2</description>
+			</parameter>
+			<parameter name="dinName3" type="text" required="true">
+				<label>digitalIn3</label>
+				<description>din3</description>
+			</parameter>
+			<parameter name="dinName4" type="text" required="true">
+				<label>digitalIn4</label>
+				<description>din4</description>
+			</parameter>
+			<parameter name="dinName5" type="text" required="true">
+				<label>digitalIn5</label>
+				<description>din5</description>
+			</parameter>
+			<parameter name="dinName6" type="text" required="true">
+				<label>digitalIn6</label>
+				<description>din6</description>
+			</parameter>
+			<parameter name="dinName7" type="text" required="true">
+				<label>digitalIn7</label>
+				<description>din7</description>
+			</parameter>
+			<parameter name="dinName8" type="text" required="true">
+				<label>digitalIn8</label>
+				<description>din8</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Dobule pressed released https://www.eclipse.org/smarthome/documentation/development/bindings/thing-definition.html#channels -->
+	<channel-type id="din">
+		<item-type>Contact</item-type>
+		<label>Contact</label>
+		<state readOnly="true" />
+	</channel-type>
+
+</thing:thing-descriptions>

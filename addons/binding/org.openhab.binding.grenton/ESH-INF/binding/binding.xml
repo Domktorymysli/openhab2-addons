@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding:binding id="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:binding="http://eclipse.org/smarthome/schemas/binding/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/binding/v1.0.0 http://eclipse.org/smarthome/schemas/binding-1.0.0.xsd">
+	<name>Grenton binding</name>
+	<description>This is unofficial binding for Grenton - http://www.grenton.pl/ by http://www.domktorymysli.pl</description>
+	<author>T</author>
+</binding:binding>

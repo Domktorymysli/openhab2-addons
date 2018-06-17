@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="relayx4">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="clu" />
+		</supported-bridge-type-refs>
+
+		<label>Grenton Relay</label>
+		<description>Grenton Relay x4</description>
+
+		<channels>
+			<channel id="dout1" typeId="dout" />
+			<channel id="dout2" typeId="dout" />
+			<channel id="dout3" typeId="dout" />
+			<channel id="dout4" typeId="dout" />
+		</channels>
+
+		<config-description>
+			<parameter name="pageId" type="integer" required="true">
+				<label>Grenton channel number. Each thing should have different pageId.</label>
+				<default>203</default>
+			</parameter>
+			<parameter name="pollingInterval" type="integer" required="true">
+				<label>PollingInterval.</label>
+				<default>10</default>
+			</parameter>
+			<parameter name="doutName1" type="text" required="true">
+				<label>relay1</label>
+				<description>dout1</description>
+			</parameter>
+			<parameter name="doutName2" type="text" required="true">
+				<label>relay2</label>
+				<description>dout2</description>
+			</parameter>
+			<parameter name="doutName3" type="text" required="true">
+				<label>relay3</label>
+				<description>dout3</description>
+			</parameter>
+			<parameter name="doutName4" type="text" required="true">
+				<label>relay4</label>
+				<description>dout4</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Color Channel -->
+	<channel-type id="dout">
+		<item-type>Switch</item-type>
+		<label>Switch</label>
+	</channel-type>
+
+</thing:thing-descriptions>

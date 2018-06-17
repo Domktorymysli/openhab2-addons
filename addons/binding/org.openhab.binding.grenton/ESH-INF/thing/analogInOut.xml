@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="analogInOut">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="clu" />
+		</supported-bridge-type-refs>
+
+		<label>Grenton Analog In/Out</label>
+		<description>Grenton Analog In/Out module</description>
+
+		<channels>
+			<channel id="analog_in1" typeId="analog_in" />
+			<channel id="analog_in2" typeId="analog_in" />
+			<channel id="analog_in3" typeId="analog_in" />
+			<channel id="analog_in4" typeId="analog_in" />
+
+			<channel id="analog_out1" typeId="analog_out" />
+			<channel id="analog_out2" typeId="analog_out" />
+			<channel id="analog_out3" typeId="analog_out" />
+			<channel id="analog_out4" typeId="analog_out" />
+
+			<channel id="sensor1" typeId="sensor" />
+			<channel id="sensor2" typeId="sensor" />
+			<channel id="sensor3" typeId="sensor" />
+			<channel id="sensor4" typeId="sensor" />
+			<channel id="sensor5" typeId="sensor" />
+			<channel id="sensor6" typeId="sensor" />
+			<channel id="sensor7" typeId="sensor" />
+			<channel id="sensor8" typeId="sensor" />
+			<channel id="sensor9" typeId="sensor" />
+			<channel id="sensor10" typeId="sensor" />
+			<channel id="sensor11" typeId="sensor" />
+			<channel id="sensor12" typeId="sensor" />
+			<channel id="sensor13" typeId="sensor" />
+			<channel id="sensor14" typeId="sensor" />
+			<channel id="sensor15" typeId="sensor" />
+			<channel id="sensor16" typeId="sensor" />
+		</channels>
+
+		<config-description>
+			<parameter name="pageId" type="integer" required="true">
+				<label>Grenton channel number. Each thing should have different pageId.</label>
+				<default>204</default>
+			</parameter>
+			<parameter name="polingInterval" type="integer" required="true">
+				<label>PollingInterval.</label>
+				<default>10</default>
+			</parameter>
+			<parameter name="analogInName1" type="text" required="true">
+				<label>AnalogIn 1</label>
+				<description>AnalogIn 1</description>
+			</parameter>
+			<parameter name="analogInName2" type="text" required="true">
+				<label>AnalogIn 2</label>
+				<description>AnalogIn 2</description>
+			</parameter>
+			<parameter name="analogInName3" type="text" required="true">
+				<label>AnalogIn 3</label>
+				<description>AnalogIn 3</description>
+			</parameter>
+			<parameter name="analogInName4" type="text" required="true">
+				<label>AnalogIn 4</label>
+				<description>AnalogIn 4</description>
+			</parameter>
+
+			<parameter name="analogOutName1" type="text" required="true">
+				<label>AnalogOut 1</label>
+				<description>AnalogOut 1</description>
+			</parameter>
+			<parameter name="analogOutName2" type="text" required="true">
+				<label>AnalogOut 2</label>
+				<description>AnalogOut 2</description>
+			</parameter>
+			<parameter name="analogOutName3" type="text" required="true">
+				<label>AnalogOut 3</label>
+				<description>AnalogOut 3</description>
+			</parameter>
+			<parameter name="analogOutName4" type="text" required="true">
+				<label>AnalogOut 4</label>
+				<description>AnalogOut 4</description>
+			</parameter>
+
+			<parameter name="analogSensorName1" type="text" required="false">
+				<label>AnalogSensor 1</label>
+				<description>AnalogSensor 1</description>
+			</parameter>
+			<parameter name="analogSensorName2" type="text" required="false">
+				<label>AnalogSensor 2</label>
+				<description>AnalogSensor 2</description>
+			</parameter>
+			<parameter name="analogSensorName3" type="text" required="false">
+				<label>AnalogSensor 3</label>
+				<description>AnalogSensor 3</description>
+			</parameter>
+			<parameter name="analogSensorName4" type="text" required="false">
+				<label>AnalogSensor 4</label>
+				<description>AnalogSensor 4</description>
+			</parameter>
+			<parameter name="analogSensorName5" type="text" required="false">
+				<label>AnalogSensor 5</label>
+				<description>AnalogSensor 5</description>
+			</parameter>
+			<parameter name="analogSensorName6" type="text" required="false">
+				<label>AnalogSensor 6</label>
+				<description>AnalogSensor 6</description>
+			</parameter>
+			<parameter name="analogSensorName7" type="text" required="false">
+				<label>AnalogSensor 7</label>
+				<description>AnalogSensor 7</description>
+			</parameter>
+			<parameter name="analogSensorName8" type="text" required="false">
+				<label>AnalogSensor 8</label>
+				<description>AnalogSensor 8</description>
+			</parameter>
+			<parameter name="analogSensorName9" type="text" required="false">
+				<label>AnalogSensor 9</label>
+				<description>AnalogSensor 9</description>
+			</parameter>
+			<parameter name="analogSensorName10" type="text" required="false">
+				<label>AnalogSensor 10</label>
+				<description>AnalogSensor 10</description>
+			</parameter>
+			<parameter name="analogSensorName11" type="text" required="false">
+				<label>AnalogSensor 11</label>
+				<description>AnalogSensor 11</description>
+			</parameter>
+			<parameter name="analogSensorName12" type="text" required="false">
+				<label>AnalogSensor 12</label>
+				<description>AnalogSensor 12</description>
+			</parameter>
+			<parameter name="analogSensorName13" type="text" required="false">
+				<label>AnalogSensor 13</label>
+				<description>AnalogSensor 13</description>
+			</parameter>
+			<parameter name="analogSensorName14" type="text" required="false">
+				<label>AnalogSensor 14</label>
+				<description>AnalogSensor 14</description>
+			</parameter>
+			<parameter name="analogSensorName15" type="text" required="false">
+				<label>AnalogSensor 15</label>
+				<description>AnalogSensor 15</description>
+			</parameter>
+			<parameter name="analogSensorName15" type="text" required="false">
+				<label>AnalogSensor 15</label>
+				<description>AnalogSensor 15</description>
+			</parameter>
+			<parameter name="analogSensorName16" type="text" required="false">
+				<label>AnalogSensor 16</label>
+				<description>AnalogSensor 16</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<channel-type id="sensor">
+		<item-type>Number</item-type>
+		<label>Temperature</label>
+		<category>Temperature</category>
+		<state readOnly="true" />
+	</channel-type>
+
+	<channel-type id="analog_in">
+		<item-type>Number</item-type>
+		<label>AnalogIn</label>
+		<category>AnalogIn</category>
+		<state readOnly="true" />
+	</channel-type>
+
+	<channel-type id="analog_out">
+		<item-type>Number</item-type>
+		<label>AnalogOut</label>
+		<category>AnalogOut</category>
+	</channel-type>
+</thing:thing-descriptions>
+

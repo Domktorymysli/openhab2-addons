@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="grenton" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Sample Thing Type -->
+	<bridge-type id="clu">
+		<label>Grenton Clu Thing</label>
+		<description>Bridge for Grenton Binding</description>
+
+		<properties>
+			<property name="vendor">Grenton</property>
+		</properties>
+		<representation-property>serialNumber</representation-property>
+
+		<config-description>
+			<parameter name="cluIp" type="text" required="true">
+				<context>network-addess</context>
+				<label>CLU Address</label>
+				<description>Network address of the Grenton CLU</description>
+			</parameter>
+			<parameter name="openHabIp" type="text" required="true">
+				<context>network-addess</context>
+				<label>OpenHab IP Address</label>
+				<description>Network address of the OpenHab</description>
+			</parameter>
+			<parameter name="cluPort" type="integer" required="true">
+				<context>network_address</context>
+				<label>CLU Port</label>
+				<description>Port number for Grenton CLU</description>
+				<default>1234</default>
+			</parameter>
+			<parameter name="cluKey" type="text" required="true"> <!-- pattern="[^-A-Za-z0-9+/=]|=[^=]|={3,}$"> -->
+				<context>network_address</context>
+				<label>Clu Open SSL private key</label>
+				<description>Private key that is used for communication</description>
+			</parameter>
+			<parameter name="cluIv" type="text" required="true"> <!-- pattern="[^-A-Za-z0-9+/=]|=[^=]|={3,}$"> -->
+				<context>network_address</context>
+				<label>Open SSL Initialization Vector</label>
+				<description>Initialization Vector that is used for communication</description>
+			</parameter>
+			<parameter name="callbackPort" type="integer">
+				<label>Callback Port</label>
+				<description>Callback port used for communication with CLU</description>
+				<default>4032</default>
+			</parameter>
+			<parameter name="timeout" type="integer">
+				<label>Timeout</label>
+				<description>The timeout in seconds for connections to a Grenton gateway</description>
+				<advanced>true</advanced>
+				<default>1</default>
+			</parameter>
+		</config-description>
+	</bridge-type>
+</thing:thing-descriptions>

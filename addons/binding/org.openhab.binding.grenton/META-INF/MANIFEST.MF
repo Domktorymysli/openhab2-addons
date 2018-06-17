@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-ManifestVersion: 2
+Bundle-Name: Grenton Binding
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.openhab.binding.grenton;singleton:=true
+Bundle-Vendor: openHAB
+Bundle-Version: 2.3.0
+Export-Package: 
+ org.openhab.binding.grenton,
+ org.openhab.binding.grenton.handler,
+ org.openhab.binding.grenton.handler.exception
+Import-Package: 
+ org.apache.commons.codec,
+ org.apache.commons.codec.binary;version="1.6.0",
+ org.eclipse.jdt.annotation;resolution:=optional,
+ org.eclipse.smarthome.config.core,
+ org.eclipse.smarthome.config.core.status,
+ org.eclipse.smarthome.config.discovery,
+ org.eclipse.smarthome.core.library.types,
+ org.eclipse.smarthome.core.thing,
+ org.eclipse.smarthome.core.thing.binding,
+ org.eclipse.smarthome.core.thing.binding.builder,
+ org.eclipse.smarthome.core.thing.type,
+ org.eclipse.smarthome.core.types,
+ org.openhab.binding.grenton,
+ org.openhab.binding.grenton.handler,
+ org.osgi.framework;version="1.8.0",
+ org.slf4j,
+ com.google.common.collect,
+ com.google.gson
+Service-Component: OSGI-INF/*.xml
+
